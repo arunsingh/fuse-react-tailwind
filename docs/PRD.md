@@ -13,7 +13,9 @@ Status (v0.1.0)
 - Repo initialized, Vite React TS scaffolded in `app/`
 - Tailwind v4 + MUI wired, Router + Query providers
 - MSW mock API + OpenAPI codegen integrated
-- Build passing; basic Dashboard route in shell
+- Auth login, Protected routes, Dashboard, Calendar, Users CRUD
+- Dark mode toggle, lazy dashboards (Analytics, Datadog-like, Marketing, CRM, Stocks)
+- ESLint flat config, CSP, CI workflow
 
 #### Non‑Goals
 - Complex backend; the template mocks APIs via MSW and optional OpenAPI schema/stub.
@@ -61,5 +63,10 @@ Status (v0.1.0)
 - Can log in, navigate protected routes, and see mocked user data
 - Dashboard renders charts, Calendar operates, Users CRUD works against mocks
 - No linter/type errors, tests pass in CI
+
+#### Roadmap
+- v0.2.x (near-term): richer dashboards, RBAC, accessibility, performance targets, tests, security hardening
+- v0.3.x (mid-term): i18n parity, Storybook catalog, theming presets, error handling patterns
+- v0.4+ (long-term): OAuth providers, advanced tables, backend adapters
 
 
