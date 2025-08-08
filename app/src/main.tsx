@@ -5,13 +5,17 @@ import './index.css'
 import { AppProviders } from './app/providers'
 import { router } from './app/routes'
 import { enableMocks } from './app/bootstrap'
+import './i18n'
+import { ErrorBoundary } from '@shared/components/ErrorBoundary'
 
 enableMocks()
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <AppProviders>
-      <RouterProvider router={router} />
+      <ErrorBoundary>
+        <RouterProvider router={router} />
+      </ErrorBoundary>
     </AppProviders>
   </React.StrictMode>,
 )

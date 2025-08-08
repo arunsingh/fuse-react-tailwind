@@ -1,9 +1,16 @@
 // React import kept for types only if needed
+import React from 'react'
 import { createBrowserRouter } from 'react-router-dom'
 import { AppShell } from './AppShell'
-import Dashboard from '@features/dashboard/Dashboard'
-import CalendarPage from '@features/calendar/CalendarPage'
-import UsersPage from '@features/users/UsersPage'
+const Dashboard = React.lazy(() => import('@features/dashboard/Dashboard'))
+const CalendarPage = React.lazy(() => import('@features/calendar/CalendarPage'))
+const UsersPage = React.lazy(() => import('@features/users/UsersPage'))
+const AnalyticsDashboard = React.lazy(() => import('@features/dashboards/AnalyticsDashboard'))
+const DatadogDashboard = React.lazy(() => import('@features/dashboards/DatadogDashboard'))
+const MarketingDashboard = React.lazy(() => import('@features/dashboards/MarketingDashboard'))
+const CRMDashboard = React.lazy(() => import('@features/dashboards/CRMDashboard'))
+const StocksDashboard = React.lazy(() => import('@features/dashboards/StocksDashboard'))
+import NotFound from '@shared/components/NotFound'
 import LoginPage from '@features/auth/LoginPage'
 import { ProtectedRoute } from '@shared/components/ProtectedRoute'
 
@@ -14,6 +21,56 @@ export const router = createBrowserRouter([
       <ProtectedRoute>
         <AppShell>
           <Dashboard />
+        </AppShell>
+      </ProtectedRoute>
+    ),
+  },
+  {
+    path: '/dashboards/analytics',
+    element: (
+      <ProtectedRoute>
+        <AppShell>
+          <AnalyticsDashboard />
+        </AppShell>
+      </ProtectedRoute>
+    ),
+  },
+  {
+    path: '/dashboards/datadog',
+    element: (
+      <ProtectedRoute>
+        <AppShell>
+          <DatadogDashboard />
+        </AppShell>
+      </ProtectedRoute>
+    ),
+  },
+  {
+    path: '/dashboards/marketing',
+    element: (
+      <ProtectedRoute>
+        <AppShell>
+          <MarketingDashboard />
+        </AppShell>
+      </ProtectedRoute>
+    ),
+  },
+  {
+    path: '/dashboards/crm',
+    element: (
+      <ProtectedRoute>
+        <AppShell>
+          <CRMDashboard />
+        </AppShell>
+      </ProtectedRoute>
+    ),
+  },
+  {
+    path: '/dashboards/stocks',
+    element: (
+      <ProtectedRoute>
+        <AppShell>
+          <StocksDashboard />
         </AppShell>
       </ProtectedRoute>
     ),
@@ -39,6 +96,7 @@ export const router = createBrowserRouter([
     ),
   },
   { path: '/login', element: <LoginPage /> },
+  { path: '*', element: <NotFound /> },
 ])
 
 

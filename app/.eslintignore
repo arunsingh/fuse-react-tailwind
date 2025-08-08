@@ -1,0 +1,6 @@
+dist/
+public/
+src/api/generated/
+node_modules/
+src/**/*.d.ts
+
