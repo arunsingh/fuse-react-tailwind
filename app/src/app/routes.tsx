@@ -1,4 +1,4 @@
-import React from 'react'
+// React import kept for types only if needed
 import { createBrowserRouter } from 'react-router-dom'
 import { AppShell } from './AppShell'
 

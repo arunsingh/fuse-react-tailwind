@@ -1,4 +1,4 @@
-import axios, { AxiosError, AxiosInstance } from 'axios'
+import axios, { type AxiosError, type AxiosInstance, type AxiosRequestHeaders } from 'axios'
 
 let accessToken: string | null = null
 let refreshToken: string | null = null
@@ -50,7 +50,11 @@ export function createHttpClient(): AxiosInstance {
             pendingRequests = []
           }
         }
-        original.headers = { ...(original.headers || {}), 'x-retried': '1' }
+        const updatedHeaders: AxiosRequestHeaders = axios.AxiosHeaders.from({
+          ...(original.headers || {}),
+          'x-retried': '1',
+        })
+        original.headers = updatedHeaders
         return instance(original)
       }
       throw error
