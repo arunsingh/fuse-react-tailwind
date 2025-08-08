@@ -1,0 +1,48 @@
+{
+  "name": "app",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "msw": "msw init public/ --save",
+    "codegen": "openapi -i ../openapi/schema.yaml -o src/api/generated --client axios",
+    "postinstall": "pnpm msw"
+  },
+  "devDependencies": {
+    "typescript": "~5.8.3",
+    "vite": "^7.1.0",
+    "@vitejs/plugin-react": "^4.3.4"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
+    "@fullcalendar/core": "^6.1.18",
+    "@fullcalendar/daygrid": "^6.1.18",
+    "@fullcalendar/interaction": "^6.1.18",
+    "@fullcalendar/react": "^6.1.18",
+    "@fullcalendar/timegrid": "^6.1.18",
+    "@hookform/resolvers": "^5.2.1",
+    "@mui/icons-material": "^7.3.1",
+    "@mui/material": "^7.3.1",
+    "@tanstack/react-query": "^5.84.2",
+    "apexcharts": "^5.3.2",
+    "autoprefixer": "^10.4.21",
+    "axios": "^1.11.0",
+    "msw": "^2.10.4",
+    "openapi-typescript-codegen": "^0.29.0",
+    "postcss": "^8.5.6",
+    "react-apexcharts": "^1.7.0",
+    "react-hook-form": "^7.62.0",
+    "react-router-dom": "^7.8.0",
+    "tailwindcss": "^4.1.11",
+    "zod": "^4.0.15"
+  },
+  "msw": {
+    "workerDirectory": [
+      "public"
+    ]
+  }
+}
