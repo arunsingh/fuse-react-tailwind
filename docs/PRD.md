@@ -9,6 +9,12 @@ Build a production‑ready, enterprise‑grade React admin template inspired by 
 - Strong DX: type‑safe API client generation from OpenAPI, MSW mocks, hot reload, tests, linting, formatting.
 - Documented architecture, extension points, and examples to accelerate customization.
 
+Status (v0.1.0)
+- Repo initialized, Vite React TS scaffolded in `app/`
+- Tailwind v4 + MUI wired, Router + Query providers
+- MSW mock API + OpenAPI codegen integrated
+- Build passing; basic Dashboard route in shell
+
 #### Non‑Goals
 - Complex backend; the template mocks APIs via MSW and optional OpenAPI schema/stub.
 - Multi‑tenant SaaS billing; payment flows.

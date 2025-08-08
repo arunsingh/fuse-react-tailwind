@@ -1,6 +1,7 @@
 import React from 'react'
-import { AppBar, Box, Container, CssBaseline, IconButton, Toolbar, Typography } from '@mui/material'
+import { AppBar, Box, Container, CssBaseline, IconButton, Toolbar, Typography, Button, Stack } from '@mui/material'
 import MenuIcon from '@mui/icons-material/Menu'
+import { Link as RouterLink } from 'react-router-dom'
 
 export function AppShell({ children }: { children: React.ReactNode }) {
   return (
@@ -14,6 +15,11 @@ export function AppShell({ children }: { children: React.ReactNode }) {
           <Typography variant="h6" noWrap component="div">
             Admin Template
           </Typography>
+          <Stack direction="row" spacing={1} sx={{ ml: 2 }}>
+            <Button color="inherit" component={RouterLink} to="/">Dashboard</Button>
+            <Button color="inherit" component={RouterLink} to="/calendar">Calendar</Button>
+            <Button color="inherit" component={RouterLink} to="/users">Users</Button>
+          </Stack>
         </Toolbar>
       </AppBar>
       <Toolbar />
