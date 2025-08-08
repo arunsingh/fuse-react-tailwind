@@ -1,0 +1,13 @@
+node_modules/
+dist/
+.DS_Store
+.env*
+coverage/
+src/api/generated/
+.vite/
+.turbo/
+pnpm-lock.yaml
+yarn.lock
+package-lock.json
+
+
