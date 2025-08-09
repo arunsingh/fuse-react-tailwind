@@ -7,6 +7,7 @@ import { router } from './app/routes'
 import { enableMocks } from './app/bootstrap'
 import './i18n'
 import { ErrorBoundary } from '@shared/components/ErrorBoundary'
+import './api/initOpenAPI'
 
 enableMocks()
 
