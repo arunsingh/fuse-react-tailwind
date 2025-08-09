@@ -20,8 +20,17 @@ export function createHttpClient(): AxiosInstance {
   })
 
   instance.interceptors.request.use((config) => {
+    // RFC 9110 section 12: send Accept to indicate JSON preferred
+    config.headers = config.headers || {}
+    if (!config.headers.Accept) {
+      config.headers.Accept = 'application/json'
+    }
+    // Send user language preference (RFC 9110 Accept-Language)
+    const lang = typeof navigator !== 'undefined' ? navigator.language : 'en'
+    if (!config.headers['Accept-Language']) {
+      config.headers['Accept-Language'] = lang
+    }
     if (accessToken) {
-      config.headers = config.headers || {}
       config.headers.Authorization = `Bearer ${accessToken}`
     }
     return config

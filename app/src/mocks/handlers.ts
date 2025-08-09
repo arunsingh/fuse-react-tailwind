@@ -48,7 +48,9 @@ export const handlers = [
       ...body,
     }
     users.unshift(newUser)
-    return HttpResponse.json(newUser, { status: 201 })
+    const headers = new Headers()
+    headers.set('Location', `/api/users/${newUser.id}`)
+    return HttpResponse.json(newUser, { status: 201, headers })
   }),
 
   http.get('/api/users/:id', async ({ params }) => {
