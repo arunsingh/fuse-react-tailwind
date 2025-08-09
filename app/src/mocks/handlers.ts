@@ -69,6 +69,12 @@ export const handlers = [
     users = users.filter((u) => u.id !== params.id)
     return new HttpResponse(null, { status: 204 })
   }),
+
+  http.post('/api/audit', async ({ request }) => {
+    // accept audit logs
+    await request.json()
+    return new HttpResponse(null, { status: 204 })
+  }),
 ]
 
 
