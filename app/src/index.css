@@ -4,18 +4,22 @@ html, body, #root {
   height: 100%;
 }
 
-:root {
-  --brand-primary: 34 99 235; /* rgb(34,99,235) */
-  --brand-secondary: 99 102 241;
-  --brand-bg: 249 250 251;
+@layer theme {
+  :root {
+  /* Tokens inspired by shared Figma kits: primary = brand blue, secondary = violet */
+  --brand-primary: 59 130 246;  /* Tailwind blue-500 */
+  --brand-secondary: 139 92 246; /* violet-500 */
+  --brand-bg: 248 250 252; /* slate-50 */
   --brand-surface: 255 255 255;
+  --brand-text: 15 23 42; /* slate-900 */
+  }
 }
 
-.card-surface {
+@utility card-surface {
   @apply rounded-xl border border-gray-200/70 bg-white/70 backdrop-blur-sm shadow-sm;
 }
 
-.kpi {
+@utility kpi {
   @apply card-surface p-4 flex flex-col gap-2 hover:shadow-md transition-shadow duration-200;
 }
 
