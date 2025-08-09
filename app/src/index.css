@@ -4,4 +4,19 @@ html, body, #root {
   height: 100%;
 }
 
+:root {
+  --brand-primary: 34 99 235; /* rgb(34,99,235) */
+  --brand-secondary: 99 102 241;
+  --brand-bg: 249 250 251;
+  --brand-surface: 255 255 255;
+}
+
+.card-surface {
+  @apply rounded-xl border border-gray-200/70 bg-white/70 backdrop-blur-sm shadow-sm;
+}
+
+.kpi {
+  @apply card-surface p-4 flex flex-col gap-2 hover:shadow-md transition-shadow duration-200;
+}
+
 

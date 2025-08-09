@@ -13,6 +13,7 @@ const StocksDashboard = React.lazy(() => import('@features/dashboards/StocksDash
 import NotFound from '@shared/components/NotFound'
 const VoiceGenerator = React.lazy(() => import('@features/voice/VoiceGenerator'))
 const SupportChat = React.lazy(() => import('@features/support/SupportChat'))
+const Web3Connect = React.lazy(() => import('@features/web3/Web3Connect'))
 import LoginPage from '@features/auth/LoginPage'
 import { ProtectedRoute } from '@shared/components/ProtectedRoute'
 
@@ -113,6 +114,16 @@ export const router = createBrowserRouter([
       <ProtectedRoute>
         <AppShell>
           <SupportChat />
+        </AppShell>
+      </ProtectedRoute>
+    ),
+  },
+  {
+    path: '/web3',
+    element: (
+      <ProtectedRoute>
+        <AppShell>
+          <Web3Connect />
         </AppShell>
       </ProtectedRoute>
     ),
