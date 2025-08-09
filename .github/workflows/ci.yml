@@ -32,6 +32,12 @@ jobs:
         run: |
           cd app
           pnpm run build
+      - name: Playwright smoke
+        run: |
+          cd app
+          pnpm run dev -- --port 5173 &
+          npx wait-on http://localhost:5173
+          pnpm exec playwright test --config=playwright.config.ts
   browserstack-smoke:
     if: github.event_name == 'schedule'
     runs-on: ubuntu-latest

@@ -75,6 +75,13 @@ export const handlers = [
     await request.json()
     return new HttpResponse(null, { status: 204 })
   }),
+  http.post('/api/oauth/:provider/callback', async ({ params }) => {
+    return HttpResponse.json({
+      accessToken: 'oauth-access',
+      refreshToken: 'oauth-refresh',
+      user: { id: 'u_oauth', name: `${params.provider}-user`, email: `${params.provider}@example.com`, role: 'user', createdAt: new Date().toISOString() },
+    })
+  }),
 ]
 
 
