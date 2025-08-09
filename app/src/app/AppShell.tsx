@@ -31,6 +31,8 @@ export function AppShell({ children }: { children: React.ReactNode }) {
             <Button color="inherit" component={RouterLink} to="/dashboards/marketing">Marketing</Button>
             <Button color="inherit" component={RouterLink} to="/dashboards/crm">CRM</Button>
             <Button color="inherit" component={RouterLink} to="/dashboards/stocks">Stocks</Button>
+            <Button color="inherit" component={RouterLink} to="/voice">Voice</Button>
+            <Button color="inherit" component={RouterLink} to="/support/chat">Support</Button>
           </Stack>
         </Toolbar>
       </AppBar>

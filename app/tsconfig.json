@@ -29,5 +29,6 @@
       "@shared/*": ["src/shared/*"]
     }
   },
-  "include": ["src"]
+  "include": ["src"],
+  "exclude": ["src/stories/**"]
 }

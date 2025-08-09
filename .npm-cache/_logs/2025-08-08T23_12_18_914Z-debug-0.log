@@ -1,0 +1,23 @@
+0 verbose cli /Users/aruns/.nvm/versions/node/v20.19.4/bin/node /Users/aruns/.nvm/versions/node/v20.19.4/lib/node_modules/npm/bin/npm-cli.js
+1 info using npm@10.8.2
+2 info using node@v20.19.4
+3 silly config load:file:/Users/aruns/.nvm/versions/node/v20.19.4/lib/node_modules/npm/npmrc
+4 silly config load:file:/Users/aruns/fuse_react_tailwind/app/.npmrc
+5 silly config load:file:/Users/aruns/.npmrc
+6 silly config load:file:/Users/aruns/.nvm/versions/node/v20.19.4/etc/npmrc
+7 verbose title npm exec @storybook/cli@9.1.1 add --yes @storybook/addon-vitest@9.1.1
+8 verbose argv "exec" "--yes" "--" "@storybook/cli@9.1.1" "add" "--yes" "@storybook/addon-vitest@9.1.1"
+9 verbose logfile logs-max:10 dir:/Users/aruns/fuse_react_tailwind/.npm-cache/_logs/2025-08-08T23_12_18_914Z-
+10 verbose logfile /Users/aruns/fuse_react_tailwind/.npm-cache/_logs/2025-08-08T23_12_18_914Z-debug-0.log
+11 silly logfile start cleaning logs, removing 1 files
+12 silly logfile done cleaning log files
+13 silly packumentCache heap:2197815296 maxSize:549453824 maxEntrySize:274726912
+14 http fetch GET 200 https://registry.npmjs.org/@storybook%2fcli 471ms (cache revalidated)
+15 silly packumentCache heap:2197815296 maxSize:549453824 maxEntrySize:274726912
+16 silly packumentCache heap:2197815296 maxSize:549453824 maxEntrySize:274726912
+17 verbose cwd /Users/aruns/fuse_react_tailwind/app
+18 verbose os Darwin 21.6.0
+19 verbose node v20.19.4
+20 verbose npm  v10.8.2
+21 verbose exit 0
+22 info ok

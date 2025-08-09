@@ -11,6 +11,8 @@ const MarketingDashboard = React.lazy(() => import('@features/dashboards/Marketi
 const CRMDashboard = React.lazy(() => import('@features/dashboards/CRMDashboard'))
 const StocksDashboard = React.lazy(() => import('@features/dashboards/StocksDashboard'))
 import NotFound from '@shared/components/NotFound'
+const VoiceGenerator = React.lazy(() => import('@features/voice/VoiceGenerator'))
+const SupportChat = React.lazy(() => import('@features/support/SupportChat'))
 import LoginPage from '@features/auth/LoginPage'
 import { ProtectedRoute } from '@shared/components/ProtectedRoute'
 
@@ -91,6 +93,26 @@ export const router = createBrowserRouter([
       <ProtectedRoute>
         <AppShell>
           <UsersPage />
+        </AppShell>
+      </ProtectedRoute>
+    ),
+  },
+  {
+    path: '/voice',
+    element: (
+      <ProtectedRoute>
+        <AppShell>
+          <VoiceGenerator />
+        </AppShell>
+      </ProtectedRoute>
+    ),
+  },
+  {
+    path: '/support/chat',
+    element: (
+      <ProtectedRoute>
+        <AppShell>
+          <SupportChat />
         </AppShell>
       </ProtectedRoute>
     ),

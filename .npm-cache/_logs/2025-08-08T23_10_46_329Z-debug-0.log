@@ -1,0 +1,20 @@
+0 verbose cli /Users/aruns/.nvm/versions/node/v20.19.4/bin/node /Users/aruns/.nvm/versions/node/v20.19.4/bin/npm
+1 info using npm@10.8.2
+2 info using node@v20.19.4
+3 silly config load:file:/Users/aruns/.nvm/versions/node/v20.19.4/lib/node_modules/npm/npmrc
+4 silly config load:file:/Users/aruns/fuse_react_tailwind/app/.npmrc
+5 silly config load:file:/Users/aruns/.npmrc
+6 silly config load:file:/Users/aruns/.nvm/versions/node/v20.19.4/etc/npmrc
+7 verbose title npm info @storybook/react-vite version
+8 verbose argv "info" "@storybook/react-vite" "version"
+9 verbose logfile logs-max:10 dir:/Users/aruns/fuse_react_tailwind/.npm-cache/_logs/2025-08-08T23_10_46_329Z-
+10 verbose logfile /Users/aruns/fuse_react_tailwind/.npm-cache/_logs/2025-08-08T23_10_46_329Z-debug-0.log
+11 silly logfile start cleaning logs, removing 1 files
+12 silly logfile done cleaning log files
+13 http fetch GET 200 https://registry.npmjs.org/@storybook%2freact-vite 3013ms (cache miss)
+14 verbose cwd /Users/aruns/fuse_react_tailwind/app
+15 verbose os Darwin 21.6.0
+16 verbose node v20.19.4
+17 verbose npm  v10.8.2
+18 verbose exit 0
+19 info ok

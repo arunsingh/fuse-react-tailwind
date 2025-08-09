@@ -35,6 +35,12 @@ Status (v0.1.0)
 - Forms: examples—wizard, dynamic fields, file input, async validation.
 - Settings: profile, preferences, notifications, theme density.
 - Error/Empty states: 404, 500, empty lists, loading skeletons.
+- 100% responsive design: mobile/tablet/desktop layouts, BrowserStack matrix and breakpoints.
+- Figma-compatible tokens: design tokens mapped to Tailwind and MUI theme for portability.
+- Extended components: Swiper sliders, Drag & Drop, Ratings, animations, SVG icons (Iconify), hover interactions.
+- Content system: MDX docs and Sanity blog integration (read-only), subscription forms with auth.
+- AI features: Voice Generator (TTS), conversational support bot with model switcher, recommendation hooks.
+- Starter kits: OpenAI + Next.js (docs), Prisma/Postgres, FastAPI integration guide.
 
 #### Functional Requirements
 - Routing: public vs protected routes, nested routes, lazy‑loaded feature chunks.
@@ -50,6 +56,7 @@ Status (v0.1.0)
 - Reliability: MSW‑backed mocks for offline/CI; tests covering critical flows.
 - Security: JWT handling, route guards, basic XSS/CSRF considerations, dependency scanning.
 - DX: <2s hot reload, type‑safe builds, lint‑free code.
+- QA: BrowserStack device profiles and smoke runs on ≥ 3,000 device/OS combos (documented matrix; CI hooks optional).
 
 #### Deliverables
 - Working SPA with the features above
@@ -65,8 +72,8 @@ Status (v0.1.0)
 - No linter/type errors, tests pass in CI
 
 #### Roadmap
-- v0.2.x (near-term): richer dashboards, RBAC, accessibility, performance targets, tests, security hardening
+- v0.2.x (near-term): richer dashboards (widgets/metrics/tables), RBAC, accessibility, perf targets, tests, security hardening, Storybook inventory, Swiper/DnD/Rating/animations, Iconify
 - v0.3.x (mid-term): i18n parity, Storybook catalog, theming presets, error handling patterns
-- v0.4+ (long-term): OAuth providers, advanced tables, backend adapters
+- v0.4+ (long-term): OAuth providers, advanced tables, backend adapters, Sanity blog + MDX docs, AI Voice/Chat enhancements, BrowserStack automated suites
 
 
